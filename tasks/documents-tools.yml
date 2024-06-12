@@ -1,0 +1,26 @@
+---
+- name: "Ensure that LibreOffice is installed"
+  community.general.pacman:
+    name: 
+      - libreoffice-still
+      - hunspell
+      - hunspell-fr
+      - hunspell-en_us
+    state: present
+
+- name: "Ensure that Texlive is installed"
+  community.general.pacman:
+    name: texlive
+    state: present
+
+- name: "Ensure that Evince is installed"
+  community.general.pacman:
+    name: evince
+    state: present
+
+- name: "Ensure that Zathura is installed"
+  community.general.pacman:
+    name:
+      - zathura
+      - zathura-pdf-mupdf
+    state: present
