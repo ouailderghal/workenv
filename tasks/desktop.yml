@@ -1,0 +1,22 @@
+- name: "Ensure that XFCE 4 is installed"
+  community.general.pacman:
+    name: 
+      - xfce4
+      - xfce4-goodies
+    state: present
+
+- name: "Ensure that i3 is installed"
+  community.general.pacman:
+    name: 
+      - i3
+      - i3lock
+      - dmenu
+    state: present
+
+- name: "Ensure that LighDM is installed"
+  community.general.pacman:
+    name: 
+      - lightdm
+      - lightdm-gtk-greeter
+    state: present
+
