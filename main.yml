@@ -3,9 +3,9 @@
   hosts: localhost
   become: true
   tasks:
-    - name: "Install fonts"
+    - name: "Configure sound system"
       ansible.builtin.include_tasks:
-        file: ./tasks/cli.yml
+        file: ./tasks/audio.yml
 
     - name: "Install command line tools"
       ansible.builtin.include_tasks:
@@ -15,19 +15,28 @@
       ansible.builtin.include_tasks:
         file: ./tasks/communication.yml
 
-    - name: "Install networking tools"
+    - name: "Install desktop tools"
       ansible.builtin.include_tasks:
-        file: ./tasks/networking-tools.yml
-    
+        file: ./tasks/desktop.yml
+
     - name: "Install documents tools"
       ansible.builtin.include_tasks:
-        file: ./tasks/documents-tools.yml
+        file: ./tasks/documents.yml
+
+    - name: "Install fonts"
+      ansible.builtin.include_tasks:
+        file: ./tasks/fonts.yml
 
     - name: "Install graphic tools"
       ansible.builtin.include_tasks:
-        file: ./tasks/graphic-tools.yml
+        file: ./tasks/graphics.yml
 
-    - name: "Configure sound system"
+    - name: "Install networking tools"
       ansible.builtin.include_tasks:
-        file: ./tasks/sound-system.yml
+        file: ./tasks/networking.yml
 
+    - name: "Install programming tools"
+      ansible.builtin.include_tasks:
+        file: ./tasks/programming.yml
+
+# vi: set ft=yaml.ansible ts=2 sts=2 sw=2 et

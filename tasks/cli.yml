@@ -39,3 +39,4 @@
     name: xdg-user-dirs
     state: present
 
+# vi: set ft=yaml.ansible ts=2 sts=2 sw=2 et
