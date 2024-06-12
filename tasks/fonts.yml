@@ -1,0 +1,22 @@
+---
+- name: "Ensure that fonts are installed"
+  community.general.pacman:
+    name:
+      - ttf-bitstream-vera
+      - ttf-dejavu
+      - gnu-free-fonts
+      - ttf-droid
+      - ttf-liberation
+      - noto-fonts
+      - ttf-roboto
+      - ttf-hack
+    state: present
+
+- name: "Ensure that 'nerd-fonts' are installed"
+  community.general.pacman:
+    name:
+      - ttf-jetbrains-mono-nerd
+      - ttf-ubuntu-mono-nerd
+      - ttf-ubuntu-nerd
+    state: present
+
