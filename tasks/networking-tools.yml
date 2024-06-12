@@ -1,0 +1,26 @@
+---
+- name: "Ensure that Network Manager applet is installed"
+  community.general.pacman:
+    name: network-manager-applet
+    state: present
+
+- name: "Ensure that OpenVPN 2 is installed"
+  community.general.pacman:
+    name:
+      - openvpn
+      - networkmanager-openvpn
+    state: present
+
+- name: "Ensure that UFW is installed"
+  community.general.pacman:
+    name:
+      - ufw
+      - gufw
+    state: present
+
+- name: "Ensure that Wireshark is installed"
+  community.general.pacman:
+    name:
+      - wireshark-cli
+      - wireshark-qt
+    state: present
