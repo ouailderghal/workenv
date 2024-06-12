@@ -1,0 +1,41 @@
+---
+- name: "Ensure that 'neovim' is installed"
+  community.general.pacman:
+    name: neovim
+    state: present
+
+- name: "Ensure that 'ctop' is installed"
+  community.general.pacman:
+    name: ctop
+    state: present
+
+- name: "Ensure that 'neofetch' is installed"
+  community.general.pacman:
+    name: neofetch
+    state: present
+
+- name: "Ensure that 'onefetch' is installed"
+  community.general.pacman:
+    name: onefetch
+    state: present
+
+- name: "Ensure that 'github-cli' is installed"
+  community.general.pacman:
+    name: github-cli
+    state: present
+
+- name: "Ensure that 'glab' is installed"
+  community.general.pacman:
+    name: glab
+    state: present
+
+- name: "Ensure that 'ranger' is installed"
+  community.general.pacman:
+    name: ranger
+    state: present
+
+- name: "Ensure that 'xdg-user-dirs' is installed"
+  community.general.pacman:
+    name: xdg-user-dirs
+    state: present
+
