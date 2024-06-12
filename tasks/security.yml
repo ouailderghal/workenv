@@ -1,0 +1,10 @@
+---
+- name: "Ensure that KeePassXC is installed"
+  community.general.pacman:
+    name: keepassxc
+    state: present
+
+- name: "Ensure that GNU Pass is installed"
+  community.general.pacman:
+    name: pass
+    state: present

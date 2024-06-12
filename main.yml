@@ -3,6 +3,10 @@
   hosts: localhost
   become: true
   tasks:
+    - name: "Install security tools"
+      ansible.builtin.include_tasks:
+        file: ./tasks/security.yml
+
     - name: "Configure sound system"
       ansible.builtin.include_tasks:
         file: ./tasks/audio.yml
