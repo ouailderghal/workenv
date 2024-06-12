@@ -1,0 +1,33 @@
+---
+- name: Configure personal work environment on Arch Linux
+  hosts: localhost
+  become: true
+  tasks:
+    - name: "Install fonts"
+      ansible.builtin.include_tasks:
+        file: ./tasks/cli.yml
+
+    - name: "Install command line tools"
+      ansible.builtin.include_tasks:
+        file: ./tasks/cli.yml
+
+    - name: "Install communication tools"
+      ansible.builtin.include_tasks:
+        file: ./tasks/communication.yml
+
+    - name: "Install networking tools"
+      ansible.builtin.include_tasks:
+        file: ./tasks/networking-tools.yml
+    
+    - name: "Install documents tools"
+      ansible.builtin.include_tasks:
+        file: ./tasks/documents-tools.yml
+
+    - name: "Install graphic tools"
+      ansible.builtin.include_tasks:
+        file: ./tasks/graphic-tools.yml
+
+    - name: "Configure sound system"
+      ansible.builtin.include_tasks:
+        file: ./tasks/sound-system.yml
+
