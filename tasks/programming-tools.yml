@@ -1,0 +1,66 @@
+---
+- name: "Ensure that Git is installed"
+  community.general.pacman:
+    name:
+      - git
+      - tig
+      - gitg
+      - meld
+    state: present
+
+- name: "Ensure that Node is installed"
+  community.general.pacman:
+    name:
+      - nodejs
+      - npm
+    state: present
+
+- name: "Ensure that Go is installed"
+  community.general.pacman:
+    name: go
+    state: present
+
+- name: "Ensure that GCC is installed"
+  community.general.pacman:
+    name:
+      - base-devel
+      - gcc
+      - make
+      - cmake
+      - automake
+    state: present
+
+- name: "Ensure that Clang is installed"
+  community.general.pacman:
+    name: clang
+    state: present
+
+- name: "Ensure that Python is installed"
+  community.general.pacman:
+    name:
+      - python-pip
+      - python-virtualenv
+      - flake8
+    state: present
+
+- name: "Ensure that Docker is installed"
+  community.general.pacman:
+    name:
+      - docker
+      - docker-buildx
+      - docker-compose
+      - dive
+    state: present
+
+- name: "Ensure that 'ansible' is installed"
+  community.general.pacman:
+    name:
+      - ansible
+      - ansible-lint
+    state: present
+
+- name: "Ensure that 'vagrant' is installed"
+  community.general.pacman:
+    name:
+      - vagrant
+    state: present
