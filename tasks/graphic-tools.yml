@@ -1,0 +1,15 @@
+---
+- name: "Ensure that GIMP is installed"
+  community.general.pacman:
+    name: gimp
+    state: present
+
+- name: "Ensure that Inkscape is installed"
+  community.general.pacman:
+    name: inkscape
+    state: present
+
+- name: "Ensure that MyPaint is installed"
+  community.general.pacman:
+    name: mypaint
+    state: present
