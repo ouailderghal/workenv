@@ -6,6 +6,7 @@
       - tig
       - gitg
       - meld
+      - lazygit
     state: present
 
 - name: "Ensure that Node is installed"
